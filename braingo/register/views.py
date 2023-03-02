@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from .forms import RegistrationForm
-from .models import Users
+from account.models import Users
 
 
 def index(request):

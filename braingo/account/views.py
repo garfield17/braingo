@@ -20,8 +20,6 @@ def index(request):
         info = request.POST
         info_pic = AccountForm(request.POST, request.FILES)
         Users.objects.filter(id=request.session['user_id']).update(name=info['name'],
-                                                                   last_name=info['last_name'],
-                                                                   about=info['about'],
                                                                    birthdate=info['birthdate'],
                                                                    email=info['email'])
         request.session['name'] = info['name']

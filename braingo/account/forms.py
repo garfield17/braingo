@@ -1,11 +1,11 @@
 from .models import Users
-from django.forms import ModelForm, TextInput, Textarea, EmailInput, FileInput
+from django.forms import ModelForm, TextInput, EmailInput, FileInput, DateInput
 
 
 class AccountForm(ModelForm):
     class Meta:
         model = Users
-        fields = ['name', 'last_name', 'about', 'email', 'birthdate', 'profile_picture']
+        fields = ['name', 'email', 'birthdate', 'profile_picture']
 
         widgets = {
             'name': TextInput(attrs={
@@ -13,17 +13,7 @@ class AccountForm(ModelForm):
                 'placeholder': 'Введите имя',
                 'name': 'name',
             }),
-            'last_name': TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Введите фамилию',
-                'name': 'last_name'
-            }),
-            'about': Textarea(attrs={
-                'class': 'form-control',
-                'placeholder': 'Информация о вас',
-                'name': 'about'
-            }),
-            'email': EmailInput(attrs={
+            'email': DateInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Введите почту',
                 'name': 'email',

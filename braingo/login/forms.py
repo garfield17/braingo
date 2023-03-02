@@ -1,4 +1,4 @@
-from .models import Users
+from account.models import Users
 from django.forms import ModelForm, PasswordInput, EmailInput
 
 

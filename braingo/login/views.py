@@ -2,7 +2,7 @@ import hashlib
 from django.shortcuts import render, redirect
 
 from .forms import LoginForm
-from .models import Users
+from account.models import Users
 
 def index(request):
     data = {'error': ""}
