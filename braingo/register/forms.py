@@ -2,8 +2,7 @@ from .models import Users
 from django.forms import ModelForm, PasswordInput, EmailInput
 
 
-
-class LoginForm(ModelForm):
+class RegistrationForm(ModelForm):
     class Meta:
         model = Users
         fields = ['email', 'password']
@@ -11,12 +10,12 @@ class LoginForm(ModelForm):
         widgets = {
             'email': EmailInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Введите email',
+                'placeholder': 'Введите почту',
                 'name': 'email',
             }),
             'password': PasswordInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Password',
-                'name': 'password',
-            })
+                'placeholder': 'Введите пароль',
+                'name': 'password'
+            }),
         }

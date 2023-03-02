@@ -1,15 +1,10 @@
 import hashlib
-import os
-
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpResponseRedirect
-from django.urls import reverse_lazy, reverse
 
 from .forms import LoginForm
-from account.models import Users
+from .models import Users
 
 def index(request):
-
     data = {'error': ""}
     if request.method == 'POST':
         info = request.POST

@@ -1,6 +1,5 @@
-from account.models import Users
-from django.forms import ModelForm, TextInput, Textarea, PasswordInput, DateInput, DateTimeInput, EmailInput, \
-    ImageField, forms, FileInput
+from .models import Users
+from django.forms import ModelForm, TextInput, Textarea, EmailInput, FileInput
 
 
 class AccountForm(ModelForm):
