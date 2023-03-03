@@ -11,7 +11,6 @@ class Users(models.Model):
         return self.name
 
     class Meta:
-        managed = False
         verbose_name = "Аккаунт"
         verbose_name_plural = "Аккаунты"
         db_table = "accounts"
