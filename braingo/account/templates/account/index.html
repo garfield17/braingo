@@ -41,12 +41,8 @@
                             {% csrf_token %}
                             <div class="row">
                                 <div class="mb-3 col-md-6">
-                                    <label for="firstName" class="form-label">Имя</label>
+                                    <label for="firstName" class="form-label">Имя пользователя</label>
                                     {{ form.name }}
-                                </div>
-                                <div class="mb-3 col-md-6">
-                                    <label for="lastName" class="form-label">Фамилия</label>
-                                    {{ form.last_name }}
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label for="birth_date" class="form-label">Год рождения</label>
@@ -55,10 +51,6 @@
                                 <div class="mb-3 col-md-6">
                                     <label for="email" class="form-label">E-mail</label>
                                     {{ form.email }}
-                                </div>
-                                <div class="mb-3 col-md-6">
-                                    <label for="about_user" class="form-label">Расскажите о себе</label>
-                                    {{ form.about }}
                                 </div>
 
                             </div>

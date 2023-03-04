@@ -13,12 +13,12 @@ class AccountForm(ModelForm):
                 'placeholder': 'Введите имя',
                 'name': 'name',
             }),
-            'email': DateInput(attrs={
+            'email': EmailInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Введите почту',
                 'name': 'email',
             }),
-            'birthdate': TextInput(attrs={
+            'birthdate': DateInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Год рождения',
                 'name': 'birthdate',
